@@ -1,0 +1,40 @@
+{
+    "name": "hello_world",
+    "version": "1.0.0",
+    "description": "A Hello World microservice",
+    "main": "dist/index.js",
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "config": "^3.0.1",
+        "cors": "^2.8.5",
+        "debug": "^4.1.1",
+        "express": "^4.16.4",
+        "reflect-metadata": "^0.1.13",
+        "rimraf": "^2.6.3",
+        "routing-controllers": "^0.7.7",
+        "winston": "^3.2.1"
+    },
+    "devDependencies": {
+        "typescript": "^3.3.3333",
+        "@types/cors": "^2.8.4",
+        "@types/config": "^0.0.34",
+        "@types/debug": "^4.1.2",
+        "@types/node": "^11.9.5",
+        "@types/body-parser": "^1.17.0",
+        "@types/express": "^4.16.1",
+        "@types/winston": "^2.4.4"
+    },
+    "scripts": {
+        "clean": "node ./node_modules/rimraf/bin.js dist",
+        "build": "node ./node_modules/typescript/bin/tsc",
+        "start": "npm run clean && npm run build && node ./dist/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": {
+        "email": "salar.hfz@gmail.com",
+        "name": "Salar Hafezi",
+        "url": "https://www.salarhafezi.ir"
+    },
+    "license": "ISC",
+    "private": true
+}
