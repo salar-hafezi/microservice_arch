@@ -1,0 +1,10 @@
+# removed .vscode from here so u can check it and enable debugging in your env
+
+# removed Dockerfile from here so u can run the project locally on Docker
+
+
+node_modules
+# tsc output
+dist
+# mongodb docker volume
+data
