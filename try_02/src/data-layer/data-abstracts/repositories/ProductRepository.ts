@@ -1,7 +1,7 @@
-import { Model,model } from "mongoose";
+import { Model } from "mongoose";
 import { Mongo } from "../../../data-layer/adapters/Mongo";
-import { IProductDocument } from "../../../data-layer/data-abstracts/repositories/IProductDocument";
-import { ProductSchema } from "../../../data-layer/data-abstracts/repositories/ProductSchema";
+import { IProductDocument } from "./IProductDocument";
+import { ProductSchema } from "./ProductSchema";
 
 export type ProductMod = Model<IProductDocument>;
 

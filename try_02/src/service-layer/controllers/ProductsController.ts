@@ -15,26 +15,18 @@ export class ProductsController {
     constructor() {
         this.productDataAgent = new ProductDataAgent();
     }
-    /*
-     API 1: get all listing
-    */
+    
     @Get('/products-listing')
     async getProductsList(): Promise<any> {
         return { "msg": "This is first Typescript Microservice" };
     }
 
-    /*
-    API 2: Get product by productId
-    */
     @Get('/product-by-id/:productId')
     @OnUndefined(404)
     async getProductById(@Param("productId") productId: number): Promise<any> {
         return { "msg": "This is first Typescript Microservice" };
     }
 
-    /*
-    API 3: Add update product.
-    */
     @Put('/add-update-product')
     async addUpdateProduct(@Body() request: IProductCreateRequest, @Req() req: any, @Res() res: any): Promise<any> {
         let validationErrors: any[] = await validateProduct(request);
@@ -57,17 +49,11 @@ export class ProductsController {
         }
     }
 
-    /*
-    API 4: find product by product type.
-    */
     @Get('/product-by-type/:productType')
     async getProductByType(@Param("productType") productType: string): Promise<any> {
         return { "msg": "This is first Typescript Microservice" };
     }
 
-    /*
-    API 5: Delete product by productId
-    */
     @Delete('/product/:productId')
     @OnUndefined(404)
     async deleteProduct(@Param("productId") productId: number): Promise<any> {

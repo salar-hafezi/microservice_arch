@@ -34,7 +34,7 @@ class Mongo {
 
         this.mongooseConnection.on('disconnected', () => {
             setTimeout(function () {
-                this.mongooseInstance = Mongoose.connect(conString);
+                this.mongooseInstance = Mongoose.connect(conString, { useNewUrlParser: true });
             }, 10000);
             logger.info('Mongoose default connection disconnected.');
         });

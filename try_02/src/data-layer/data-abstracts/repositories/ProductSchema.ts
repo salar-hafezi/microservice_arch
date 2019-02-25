@@ -1,5 +1,5 @@
 import { Schema } from "mongoose";
-import { IProductDocument } from "../../../data-layer/data-abstracts/repositories/IProductDocument";
+import { IProductDocument } from "./IProductDocument";
 
 /**
  * MongooseSchema
